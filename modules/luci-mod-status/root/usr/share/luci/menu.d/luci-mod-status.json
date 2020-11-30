@@ -133,5 +133,14 @@
 			"type": "view",
 			"path": "status/connections"
 		}
+	},
+
+	"admin/status/realtime/dsl": {
+		"title": "DSL",
+		"order": 5,
+		"action": {
+			"type": "view",
+			"path": "status/dsl"
+		}
 	}
 }
