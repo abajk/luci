@@ -1736,7 +1736,7 @@ rpc_luci_get_board_json(struct ubus_context *ctx, struct ubus_object *obj,
 }
 
 static int
-rpc_luci_get_dsl_status(struct ubus_context *ctx, struct ubus_object *obj,
+rpc_luci_get_dsl_graph(struct ubus_context *ctx, struct ubus_object *obj,
                         struct ubus_request_data *req, const char *method,
                         struct blob_attr *msg)
 {
