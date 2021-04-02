@@ -1743,6 +1743,8 @@ rpc_luci_get_dsl_graph(struct ubus_context *ctx, struct ubus_object *obj,
 	char line[128], *p, *s;
 	FILE *cmd;
 
+	printf ("%s\n", __func__);
+
 	cmd = popen("/etc/init.d/dsl_control lucistat", "r");
 
 	if (!cmd)
