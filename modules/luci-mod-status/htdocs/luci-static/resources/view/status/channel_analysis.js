@@ -292,16 +292,16 @@ return view.extend({
 
 				res.channel_width = "20 MHz";
 				if (res.ht_operation != null)
-					if (res.ht_operation.channel_width == 2040) { /* 40 MHz Channel Enabled */
-						if (res.ht_operation.secondary_channel_offset == "below") {
-							res.channel_width = "40 MHz";
-							chan_width = 4; /* 40 MHz Channel Used */
-							center_channels[0] -= 2;
-						} else if (res.ht_operation.secondary_channel_offset == "above") {
-							res.channel_width = "40 MHz";
-							chan_width = 4; /* 40 MHz Channel Used */
-							center_channels[0] += 2;
-						} else {
+					if (res.ht_operation.secondary_channel_offset == "below") {
+						res.channel_width = "40 MHz";
+						chan_width = 4; /* 40 MHz Channel Used */
+						center_channels[0] -= 2;
+					} else if (res.ht_operation.secondary_channel_offset == "above") {
+						res.channel_width = "40 MHz";
+						chan_width = 4; /* 40 MHz Channel Used */
+						center_channels[0] += 2;
+					} else {
+						if (res.ht_operation.channel_width == 2040) { /* 40 MHz Channel Enabled */
 							res.channel_width = "20 MHz (40 MHz Intolerant)";
 						}
 					}
